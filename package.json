@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "node index.js"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "V",
   "license": "ISC",
   "dependencies": {
     "cookie-session": "^1.4.0",
