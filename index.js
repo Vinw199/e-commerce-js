@@ -9,6 +9,7 @@ const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
 
 const app= express();							//App is an object that represents everything that express can do.
+import cors from 'cors';
 
 const port= process.env.PORT||3000;
 
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));			//Every single route handlers
 app.use(cookieSession({										
 	keys:['ffjdfjdjdjkdkj']									//keys property to encrypt the cookie info.
 }));
-
+app.use(cors());
 
 //Middleware - bodyParser
 //	const bodyParser=(req, res, next)=>{
