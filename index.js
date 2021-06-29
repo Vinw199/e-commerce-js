@@ -10,6 +10,8 @@ const cartsRouter = require('./routes/carts');
 
 const app= express();							//App is an object that represents everything that express can do.
 
+const port= process.env.PORT||3000;
+
 app.use(express.static('public'));				//Make the files inside public directory accessible to the outside world.
 //Automatic data parsing, i.e., from buffer form to storing it in object form in req.body. 
 app.use(bodyParser.urlencoded({extended:true}));			//Every single route handlers will use bodyParser to parse the incoming data. After writing this line of code, we dont have to worry about parsing any data anymore.
@@ -43,7 +45,7 @@ app.use(productsRouter);
 app.use(cartsRouter);
 
 //Listen to port 3000 for network requests.
-app.listen(3000, ()=> {
+app.listen(port, ()=> {
 	console.log('LISTENING...');
 });
 

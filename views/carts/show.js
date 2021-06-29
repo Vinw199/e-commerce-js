@@ -49,7 +49,7 @@ module.exports = ({ items }) => {
               <div class="message-header">
                 Total
               </div>
-              <h1 class="title">Rs.${totalPrice}</h1>
+              <h1 class="title">$${totalPrice}</h1>
               <button class="button is-primary">Buy</button>
             </div>
           </div>
